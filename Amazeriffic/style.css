@@ -108,18 +108,20 @@ html,body{
 	height:100%;
 }
 
-tabs a span {
-display:block;
-border:radius: 5px 5px 0 0;
-width: 100px;
-margin:right: 10px;
-text:align: center;
-background: #ddd;
-padding: 5px;
+.tabs a span {
+  display: inline-block;
+  border-radius: 5px 5px 0 0;
+  margin-right: 10px;
+  text-align: center;
+  background: #ddd;
+  padding: 5px;
+  white-space: nowrap;
 }
-tabs a span.active {
-background: #eee;
+
+.tabs a span.active {
+  background: #eee;
 }
+
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;

@@ -33,33 +33,27 @@
 <p>В электронной библиотеке также предусмотрена функция рекомендаций, которая помогает вам находить новые интересные книги, основываясь на ваших предпочтениях и истории чтения. Это помогает сократить время на поиск новых книг и увеличить количество интересных произведений, которые вы можете прочитать.</p>
 <p>И наконец, Digital Book предоставляет возможность делиться своими впечатлениями и обсуждать прочитанные книги с другими читателями, что позволяет расширить кругозор и получить новые взгляды на прочитанное.</p>
 <div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Tab1')">Газетные издания</button>
-  <button class="tablinks" onclick="openTab(event, 'Tab2')">Бизнес-книги</button>
-  <button class="tablinks" onclick="openTab(event, 'Tab3')">Наши соц. сети</button>
+  <button class="tablinks" onclick="openTab(event, 'newTasks')">Новые задачи</button>
+  <button class="tablinks" onclick="openTab(event, 'oldTasks')">Старые задачи</button>
+  <button class="tablinks" onclick="openTab(event, 'addTask')">Добавить задачу</button>
 </div>
 
-<div id="Tab1" class="tabcontent">
-<ul>
-  <li><a href="https://www.kp.ru/">Комсомольская правда</a></li>
-  <li><a href="https://www.kommersant.ru/">Коммерсант</a></li>
-  <li><a href="https://www.izvestia.ru"/>Известия </a><li>
-</ul>
+<div id="newTasks" class="tabcontent">
+  <h3>Новые задачи</h3>
+  <ul id="newTasksList"></ul>
 </div>
 
-<div id="Tab2" class="tabcontent">
-  <ul>
-  	<li><a href="#">Самый богатый человек в Вавилоне</a></li>
-  	<li><a href="#">Бизнес с нуля</a></li>
-  	<li><a href="#">Как стать бизнесменом</a></li>
-  </ul>
+<div id="oldTasks" class="tabcontent">
+  <h3>Старые задачи</h3>
+  <ul id="oldTasksList"></ul>
 </div>
 
-<div id="Tab3" class="tabcontent">
-  <ul>
-  	<li><a href="#">VK</a></li>
-  	<li><a href="#">Telegram</a></li>
-  	<li><a href="#">Instagram</a></li>
-  </ul>
+<div id="addTask" class="tabcontent">
+  <form>
+    <label for="taskName">Введите задачу:</label><br>
+    <input type="text" id="taskName" name="taskName"><br>
+    <button type="button" onclick="addTask()">Добавить</button>
+  </form>
 </div>
 		</div>
 		<div id = "rightcol">
