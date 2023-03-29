@@ -33,28 +33,30 @@
 <p>В электронной библиотеке также предусмотрена функция рекомендаций, которая помогает вам находить новые интересные книги, основываясь на ваших предпочтениях и истории чтения. Это помогает сократить время на поиск новых книг и увеличить количество интересных произведений, которые вы можете прочитать.</p>
 <p>И наконец, Digital Book предоставляет возможность делиться своими впечатлениями и обсуждать прочитанные книги с другими читателями, что позволяет расширить кругозор и получить новые взгляды на прочитанное.</p>
 <div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'newTasks')">Новые задачи</button>
-  <button class="tablinks" onclick="openTab(event, 'oldTasks')">Старые задачи</button>
-  <button class="tablinks" onclick="openTab(event, 'addTask')">Добавить задачу</button>
+  <button class="tablinks" onclick="openTab(event, 'newBooks')">Новые книги</button>
+  <button class="tablinks" onclick="openTab(event, 'oldBooks')">Старые книги</button>
+  <button class="tablinks" onclick="openTab(event, 'addBook')">Добавить книги</button>
+  <button class="tablinks" onclick="openTab(event, 'tags')">Теги</button>
 </div>
 
-<div id="newTasks" class="tabcontent">
-  <h3>Новые задачи</h3>
-  <ul id="newTasksList"></ul>
+<div id="newBooks" class="tabcontent">
+  <h3>Новые книги</h3>
+  <ul id="newBooksList"></ul>
 </div>
 
-<div id="oldTasks" class="tabcontent">
-  <h3>Старые задачи</h3>
-  <ul id="oldTasksList"></ul>
+<div id="oldBooks" class="tabcontent">
+  <h3>Старые книги</h3>
+  <ul id="oldBooksList"></ul>
 </div>
 
-<div id="addTask" class="tabcontent">
+<div id="addBook" class="tabcontent">
   <form>
-    <label for="taskName">Введите задачу:</label><br>
-    <input type="text" id="taskName" name="taskName"><br>
-    <button type="button" onclick="addTask()">Добавить</button>
+    <label for="bookName">Введите название книги:</label><br>
+    <input type="text" id="bookName" name="bookName"><br>
+    <button type="button" onclick="addBook()">Добавить</button>
   </form>
 </div>
+
 		</div>
 		<div id = "rightcol">
 			<img src="logo.png" width="200" height="200" alt ="Логотип библиотеки" />

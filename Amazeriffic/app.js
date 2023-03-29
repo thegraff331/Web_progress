@@ -10,88 +10,95 @@ function openTab(evt, tabName) {
   }
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
-  // добавляем вызов функции showOldTasks() при переключении на вторую вкладку
-  if (tabName === "oldTasks") {
-    showOldTasks();
+  // добавляем вызов функции showOldBooks() при переключении на вторую вкладку
+  if (tabName === "oldBooks") {
+    showOldBooks();
   }
 }
 
 // Получаем элементы с помощью их id
-var newTasksTab = document.getElementById("newTasks");
-var oldTasksTab = document.getElementById("oldTasks");
-var addTaskTab = document.getElementById("addTask");
-var newTasksList = document.getElementById("newTasksList");
-var oldTasksList = document.getElementById("oldTasksList");
-var taskNameInput = document.getElementById("taskName");
+var newBooksTab = document.getElementById("newBooks");
+var oldBooksTab = document.getElementById("oldBooks");
+var addBookTab = document.getElementById("addBook");
+var newBooksList = document.getElementById("newBooksList");
+var oldBooksList = document.getElementById("oldBooksList");
+var bookNameInput = document.getElementById("bookName");
+var tagsTab = document.getElementById("tags");
 
-
-// Массив задач
-var tasks = [];
+// Массив книг
+var books = [];
 // Функция для отображения первой вкладки
-function showNewTasks() {
-  // Очищаем список задач
-  newTasksList.innerHTML = "";
-  // Сортируем задачи по дате создания в обратном порядке
-  tasks.sort(function(a, b) {
+function showNewBooks() {
+  // Очищаем список книг
+  newBooksList.innerHTML = "";
+  // Сортируем книги по дате создания в обратном порядке
+  books.sort(function(a, b) {
     return b.createdAt - a.createdAt;
   });
-  // Добавляем каждую задачу в список
-  for (var i = 0; i < tasks.length; i++) {
-    var task = tasks[i];
+  // Добавляем каждую книгу в список
+  for (var i = 0; i < books.length; i++) {
+    var book = books[i];
     var li = document.createElement("li");
-    li.textContent = task.name;
-    newTasksList.appendChild(li);
+    li.textContent = book.name;
+    newBooksList.appendChild(li);
   }
   // Отображаем первую вкладку
-  newTasksTab.style.display = "block";
-  oldTasksTab.style.display = "none";
-  addTaskTab.style.display = "none";
-}
-
+  newBooksTab.style.display = "block";
+  oldBooksTab.style.display = "none";
+  addBookTab.style.display = "none";
+  }
 
 // Функция для отображения второй вкладки
-function showOldTasks() {
-  // Очищаем список задач
-  oldTasksList.innerHTML = "";
+function showOldBooks() {
+  // Очищаем список книг
+  oldBooksList.innerHTML = "";
   // Сортируем задачи по дате создания
-  tasks.sort(function(a, b) {
+  books.sort(function(a, b) {
     return a.createdAt - b.createdAt;
   });
   // Добавляем каждую задачу в список
-  for (var i = 0; i < tasks.length; i++) {
-    var task = tasks[i];
+  for (var i = 0; i < books.length; i++) {
+    var book = books[i];
     var li = document.createElement("li");
-    li.textContent = task.name;
-    oldTasksList.appendChild(li);
+    li.textContent = book.name;
+    oldBooksList.appendChild(li);
   }
   // Отображаем вторую вкладку
-  oldTasksTab.style.display = "block";
-  newTasksTab.style.display = "none";
-  addTaskTab.style.display = "none";
+  oldBooksTab.style.display = "block";
+  newBooksTab.style.display = "none";
+  addBookTab.style.display = "none";
 }
 
 // Функция для отображения третьей вкладки
-function showAddTask() {
+function showAddBook() {
   // Отображаем третью вкладку
-  addTaskTab.style.display = "block";
-  oldTasksTab.style.display = "none";
-  newTasksTab.style.display = "none";
+  addBookTab.style.display = "block";
+  oldBooksTab.style.display = "none";
+  newBooksTab.style.display = "none";
 }
 
-// Функция для добавления задачи
-function addTask() {
+// Функция для добавления книги
+function addBook() {
   // Получаем значения полей ввода
-  var taskName = taskNameInput.value;
-  // Создаем объект задачи
-  var task = {
-    name: taskName,
+  var bookName = bookNameInput.value;
+  // Создаем объект книги
+  var book = {
+    name: bookName,
     createdAt: new Date()
   };
-  // Добавляем задачу в массив
-  tasks.push(task);
+  // Добавляем книгу в массив
+  books.push(book);
   // Отображаем первую вкладку
-  showNewTasks();
+  showNewBooks();
   // Очищаем поля ввода
-  taskNameInput.value = "";
+  bookNameInput.value = "";
+}
+// Функция для отображения третьей вкладки
+function tags() {
+  // Отображаем третью вкладку
+  addTaskTab.style.display = "none";
+  oldTasksTab.style.display = "none";
+  newTasksTab.style.display = "none";
+  tags.style.display = "block";
 }
 
