@@ -118,9 +118,7 @@ html,body{
   white-space: nowrap;
 }
 
-.tabs a span.active {
-  background: #eee;
-}
+
 
 .tab {
   overflow: hidden;
@@ -138,23 +136,17 @@ html,body{
   font-size: 17px;
 }
 
-.tab button:hover {
-  background-color: #ddd;
-}
 
-.tab button.active {
-  background-color: #ccc;
-}
+
+
 
 .tabcontent {
-  display: none;
+ 
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
 }
-.tabcontent a:hover{
-	text-decoration: underline;
-}
+
 .tabcontent h3 {
   margin-top: 0;
 }

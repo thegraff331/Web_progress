@@ -4,11 +4,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>DB</title>
+
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 	<header>
-		<div id = "container">
+		<div class = "container">
 		<h1>Digital Book</h1>
 		</div>
 <nav>
@@ -18,7 +20,7 @@
 </nav>
 	</header>
 	<main>
-		<div id = "content">
+		<div class = "container">
 		<h2>"Digital Book - умное чтение для современных читателей!"</h2>
 		<p>Вся библиотека и данные о чтении синхронизируются каждую минуту, поэтому начать читать можно на смартфоне по пути на работу, а продолжить — с планшета, сидя дома на диване. При этом заметки, цитаты и закладки — полезное дополнение для вдумчивого читателя — также переносятся. Все важные идеи, емкие фразы и инструкции, которые вы выделите, хранятся в разделе заметок. На сайте доступна выгрузка всех заметок в текстовый документ.</p>
 		<h3>Преимущества электронной библиотеки:</h3>
@@ -32,30 +34,13 @@
 <p>Также, в Digital Book вы можете получить доступ к огромному количеству книг, включая новинки, бестселлеры, классические произведения и многое другое. Большинство книг представлены в различных форматах, так что вы можете выбрать удобный для вас формат чтения, например, электронная книга или аудиокнига.</p>
 <p>В электронной библиотеке также предусмотрена функция рекомендаций, которая помогает вам находить новые интересные книги, основываясь на ваших предпочтениях и истории чтения. Это помогает сократить время на поиск новых книг и увеличить количество интересных произведений, которые вы можете прочитать.</p>
 <p>И наконец, Digital Book предоставляет возможность делиться своими впечатлениями и обсуждать прочитанные книги с другими читателями, что позволяет расширить кругозор и получить новые взгляды на прочитанное.</p>
-<div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'newBooks')">Новые книги</button>
-  <button class="tablinks" onclick="openTab(event, 'oldBooks')">Старые книги</button>
-  <button class="tablinks" onclick="openTab(event, 'addBook')">Добавить книги</button>
-  <button class="tablinks" onclick="openTab(event, 'tags')">Теги</button>
+<div class="tabs">
+  <a href=""><span class="tablinks">Самые новые книги</span></a>
+  <a href=""><span class="tablinks">Самые старые книги</span></a>
+  <a href=""><span class="tablinks">Добавить книгу</span></a>
 </div>
+<div class="tabcontent active"> </div>
 
-<div id="newBooks" class="tabcontent">
-  <h3>Новые книги</h3>
-  <ul id="newBooksList"></ul>
-</div>
-
-<div id="oldBooks" class="tabcontent">
-  <h3>Старые книги</h3>
-  <ul id="oldBooksList"></ul>
-</div>
-
-<div id="addBook" class="tabcontent">
-  <form>
-    <label for="bookName">Введите название книги:</label><br>
-    <input type="text" id="bookName" name="bookName"><br>
-    <button type="button" onclick="addBook()">Добавить</button>
-  </form>
-</div>
 
 		</div>
 		<div id = "rightcol">
@@ -79,7 +64,7 @@
 <li><a href="faq.html">ВиО</a></li>
 <li><a href="#">Вакансии</a></li>
 </ul>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script src="app.js"></script>
 </body>
 </html>
