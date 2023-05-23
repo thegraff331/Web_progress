@@ -4,11 +4,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>DB</title>
-
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<body>
+
+<body onload="loadBody()">
 	<header>
 		<div class = "container">
 		<h1>Digital Book</h1>
@@ -16,7 +16,7 @@
 <nav>
 <a href ="#">Регистрация | </a> 
 <a href ="faq.html">ВиО  | </a> 
-<a href ="#">Техподдержка</a>
+<a href ="pictureshow.html">Техподдержка</a>
 </nav>
 	</header>
 	<main>
@@ -37,11 +37,10 @@
 <div class="tabs">
   <a href=""><span class="tablinks">Самые новые книги</span></a>
   <a href=""><span class="tablinks">Самые старые книги</span></a>
+  <a href=""><span class="tablinks">Теги</span></a>
   <a href=""><span class="tablinks">Добавить книгу</span></a>
 </div>
 <div class="tabcontent active"> </div>
-
-
 		</div>
 		<div id = "rightcol">
 			<img src="logo.png" width="200" height="200" alt ="Логотип библиотеки" />
@@ -60,7 +59,7 @@
 <li><a href="#">Домой</a></li>
 <li><a href ="#">О нас</a></li>
 <li><a href="#">Право</a></li>
-<li><a href="#">Техподдержка</a></li>
+<li><a href="pictureshow.html">Техподдержка</a></li>
 <li><a href="faq.html">ВиО</a></li>
 <li><a href="#">Вакансии</a></li>
 </ul>

@@ -37,14 +37,14 @@ var main = function (adObjects) {
       if($element.parent().is(":nth-child(1)")){
         $content = $("<ul>");
         for (var i = ads.length - 1; i >= 0; i--) {
-          $content.append($("<li>").text(ads[i].tags));
+          //$content.append($("<li>").text(ads[i].tags));
           $content.append($("<li>").text(ads[i].description));
         }
       }
       else if($element.parent().is(":nth-child(2)")){
         $content = $("<ul>");
         ads.forEach(function(ad){
-          $content.append($("<li>").text(ad.tags));
+         // $content.append($("<li>").text(ad.tags));
           $content.append($("<li>").text(ad.description));
         });
       }
