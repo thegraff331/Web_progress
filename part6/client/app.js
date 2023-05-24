@@ -80,13 +80,13 @@ var main = function (adObjects) {
             description: $("[name='description']").val(),
             tags: $("[name='tags']").val().split(",").map(function(tag) { return tag.trim(); })
           };
-          console.log('hello mir');
-          ads.push(newAd);
+          
+          
           
      $.post("books", newAd, function (result) {
             console.log(result);
             
-            ads.push(newAd);
+           ads.push(newAd);
 
             organizedByTag = organizeByTags(ads);
             
